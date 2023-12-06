@@ -1,0 +1,58 @@
+# Track
+
+# Outher track points
+v 12 0 0
+v 6 1 0
+v 10 5 0
+v 10 8 0
+v 6 10 0
+v 1 7 0
+v -6 8 0
+v -10 3 0
+v -3 0 0
+v -3 -7 0
+v 3 -7 0
+v 7 -4 0
+v 12 -3 0
+
+# Inner track points
+v 4 2 0
+v 9 7 0
+v 7 7 0
+v 2 5 0
+v -3 6 0
+v -5 4 0
+v -1 0 0
+v -1 -4 0
+v 3 -5 0
+v 9 -1 0
+v 3 0 0
+
+# Outher track edges
+e 0 1
+e 1 2
+e 2 3
+e 3 4
+e 4 5
+e 5 6
+e 6 7
+e 7 8
+e 8 9
+e 9 10
+e 10 11
+e 11 12
+e 12 0
+
+# Inner track edges
+e 13 14
+e 14 15
+e 15 16
+e 16 17
+e 17 18
+e 18 19
+e 19 20
+e 20 21
+e 21 22
+e 22 23
+e 23 13
+

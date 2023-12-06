@@ -1,0 +1,17 @@
+public void drawAxis(Graphics g){
+        drawLine(g, new Vector2D(-100,0), new Vector2D(100,0));              // X-axis
+        drawLine(g, new Vector2D(0,-100), new Vector2D(0,100));              // Y-axis
+        
+        for (int i=-100;i<100;i++)
+        {
+            drawLine(g, new Vector2D(i,0.1), new Vector2D(i,-0.1));
+            drawLine(g, new Vector2D(0.1,i), new Vector2D(-0.1,i));
+            int j = i%5;
+            if (j==0)
+            {
+                drawLine(g, new Vector2D(i,0.25), new Vector2D(i,-0.25));    
+                drawLine(g, new Vector2D(0.25,i), new Vector2D(-0.25,i));
+            }
+            
+        }
+    }
