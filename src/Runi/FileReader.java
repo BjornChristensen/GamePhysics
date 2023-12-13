@@ -10,6 +10,7 @@ import static java.awt.Color.lightGray;
 import static java.awt.Color.orange;
 
 import java.awt.Color;
+import java.io.File;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -47,12 +48,16 @@ public class FileReader {
 	public ArrayList<Edge<V3>> readFileLocal(String pathStr, Color[] colors){
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream(pathStr);
 
+		File file = new File(pathStr);
+
+
 		ArrayList<V3> vertices = new ArrayList<V3>();
 		ArrayList<V3> poly_vertices = new ArrayList<V3>();
 		ArrayList<Edge<V3>> edges = new ArrayList<Edge<V3>>();
 		int colorInd = 1;
 		if(colors == null) colors = new Color[]{Color.black}; // always have a default color
-		try (Scanner scanner =  new Scanner(is, ENCODING.name())){ // try with resourceses. closing automatically. 
+//		try (Scanner scanner =  new Scanner(is, ENCODING.name())){ // try with resourceses. closing automatically.
+		try (Scanner scanner =  new Scanner(file)){ // try with resourceses. closing automatically.
 
 
 			while (scanner.hasNextLine()){ // check if there is another line

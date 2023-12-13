@@ -20,7 +20,7 @@ public class Main {
 		JFrame frame1 = new JFrame();
 		frame1.setSize(800, 500);
 		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame1.add(new DrawPanel(new V3(10,5,2), 400,300,100,1));	
+		frame1.add(new DrawPanel(new V3(10,5,2), 400,300,100,1));
 		frame1.setVisible(true);
 		
 /*		JFrame frame2 = new JFrame();
@@ -82,10 +82,14 @@ public class Main {
 			 */
 
 			model = FileReader.readFile("src/Runi/Warsong Attack Helicopter.obj", null);
+			model = FileReader.readFile("src/Runi/cube.obj", null);
+			model = FileReader.readFile("src/Runi/Football.obj", null);
+			model = FileReader.readFile("src/Runi/Parachute.obj", null);
 			S =new Camera(scale, scale, ox, oy);
 			S.moveTo(campoint);
 		      S.focus(c);
-		      S.z=5;
+			S.z=0.1;
+//			S.z=200;
 			myTimer.start();
 		}
 
